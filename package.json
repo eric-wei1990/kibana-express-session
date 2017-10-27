@@ -1,6 +1,6 @@
 {
   "name": "kibana-express-session",
-  "version": "1.0.0",
+  "version": "5.6.4",
   "description": "express-session compatible Redis backed authentication for Kibana",
   "dependencies": {
     "express-session-hapi": "1.0.0"
