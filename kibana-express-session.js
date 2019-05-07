@@ -19,19 +19,22 @@ module.exports = function (kibana) {
       }).default()
     },
 
-    init: function (server) {
+    init: async function (server) {
       const config = server.config();
 
-      server.register(expressSessionHapi, function () {
-        server.auth.strategy('session', 'cookie', 'required', {
-          cookieName: config.get(`${PLUGIN_NAME}.cookieName`),
-          redirectTo: config.get(`${PLUGIN_NAME}.redirectTo`),
-          redis: config.get(`${PLUGIN_NAME}.redis`),
-          secret: config.get(`${PLUGIN_NAME}.secret`),
-          sessionIDPrefix: config.get(`${PLUGIN_NAME}.sessionIDPrefix`),
-          userProp: config.get(`${PLUGIN_NAME}.userProp`),
-        });
+      await server.register({
+        plugin: expressSessionHapi,
       });
+
+      server.auth.strategy('session-nelo', 'express-session-hapi', {
+        cookieName: config.get(`${PLUGIN_NAME}.cookieName`),
+        redirectTo: config.get(`${PLUGIN_NAME}.redirectTo`),
+        redis: config.get(`${PLUGIN_NAME}.redis`),
+        secret: config.get(`${PLUGIN_NAME}.secret`),
+        sessionIDPrefix: config.get(`${PLUGIN_NAME}.sessionIDPrefix`),
+        userProp: config.get(`${PLUGIN_NAME}.userProp`),
+      });
+      server.auth.default('session-nelo');
     }
   });
 };

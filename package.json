@@ -1,21 +1,21 @@
 {
   "name": "kibana-express-session",
-  "version": "5.6.4",
+  "version": "7.0.1",
   "description": "express-session compatible Redis backed authentication for Kibana",
   "dependencies": {
-    "express-session-hapi": "1.0.0"
+    "express-session-hapi": "https://github.com/eric-wei1990/express-session-hapi.git"
   },
   "devDependencies": {
     "grunt-contrib-compress": "1.2.0",
     "grunt": "1.0.1"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
   "license": "MIT",
   "main": "kibana-express-session.js",
   "peerDependencies": {
-    "hapi": "8.8.1"
+    "hapi": "^17.5.3"
   },
   "repository": {
     "type": "git",
