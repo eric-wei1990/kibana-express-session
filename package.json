@@ -1,9 +1,9 @@
 {
   "name": "kibana-express-session",
-  "version": "7.0.2",
+  "version": "7.2.0",
   "description": "express-session compatible Redis backed authentication for Kibana",
   "kibana": {
-    "version": "7.0.2"
+    "version": "7.2.0"
   },
   "dependencies": {
     "express-session-hapi": "https://github.com/eric-wei1990/express-session-hapi.git"
