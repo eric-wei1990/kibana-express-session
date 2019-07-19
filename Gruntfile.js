@@ -1,10 +1,10 @@
 module.exports = function (grunt) {
-	const package = require('./package.json');
+	const packageJson = require('./package.json');
 
-	var deps = Object.keys(package.dependencies || {});
+	var deps = Object.keys(packageJson.dependencies || {});
 
 	var files = [
-		`${package.name}.js`,
+		`${packageJson.name}.js`,
 		'LICENSE',
 		'package.json',
 		'README.md',
@@ -18,11 +18,11 @@ module.exports = function (grunt) {
 		compress: {
 			build: {
 				options: {
-					archive: `build/${package.name}-${package.version}.zip`
+					archive: `build/${packageJson.name}-${packageJson.version}.zip`
 				},
 				src: files,
 				// The directory name within the archive.
-				dest: package.name
+				dest: packageJson.name
 			}
 		}
 	});
