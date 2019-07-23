@@ -11,7 +11,8 @@ module.exports = function (kibana) {
         redirectTo: Joi.string().default('/login'),
         redis: Joi.object().keys({
           host: Joi.string(),
-          port: Joi.number().default(6379)
+          port: Joi.number().default(6379),
+          clusterEnabled: Joi.boolean().default(false),
         }),
         secret: Joi.string(),
         sessionIDPrefix: Joi.string(),
