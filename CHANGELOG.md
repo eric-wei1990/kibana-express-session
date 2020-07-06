@@ -1,6 +1,6 @@
 # Kibana Change Log
 
-## 7.7.1.0
+## 7.7.1.1
 
 ### Improvements
 
