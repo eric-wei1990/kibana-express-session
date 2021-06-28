@@ -1,5 +1,11 @@
 # Kibana Change Log
 
+## 7.7.1.2
+
+### Improvements
+
+- nelo/kibana#144 Support password for reids
+
 ## 7.7.1.1
 
 ### Improvements

@@ -26,6 +26,7 @@ kibana-express-session:
   enabled: true
   redis:
     host: ''
+    password: ''
   redirectTo: '/login'
   secret: ''
 ```
